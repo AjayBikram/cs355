@@ -1,19 +1,17 @@
-const clickBtn = document.getElementById('yesBtn');
-clickBtn.addEventListener("click",foo);
+let addToDoButton = document.getElementById('addToDo');
+let toDoContainer = document.getElementById('toDoContainer');
+let inputField = document.getElementById('inputField');
 
-function foo(){
-    let element = document.getElementById('winner');
-
-    
-    element.classList.add('winnerGreen');
-}
-const noBtn = document.getElementById('noBtn');
-noBtn.addEventListener("click",noo);
-
-function noo(){
-    let element = document.getElementById('winner');
-
-    
-    element.classList.add('winnerRed');
-}
-
+addToDoButton.addEventListener('click', function(){
+    var paragraph = document.createElement('p');
+    paragraph.classList.add('paragraph-styling');
+    paragraph.innerText = inputField.value;
+    toDoContainer.appendChild(paragraph);
+    inputField.value = "";
+    paragraph.addEventListener('click', function(){
+        paragraph.style.textDecoration = "line-through";
+    })
+    paragraph.addEventListener('dblclick', function(){
+        toDoContainer.removeChild(paragraph);
+    })
+})
