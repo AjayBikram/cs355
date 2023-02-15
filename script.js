@@ -5,15 +5,15 @@ function foo(){
     let element = document.getElementById('winner');
 
     
-    element.classList.add('winnerGreen')
+    element.classList.add('winnerGreen');
 }
 const noBtn = document.getElementById('noBtn');
 noBtn.addEventListener("click",noo);
 
 function noo(){
-    let element = document.getElementById('')
+    let element = document.getElementById('winner');
 
     
-    element.classList.add('winnerRed')
+    element.classList.add('winnerRed');
 }
 
